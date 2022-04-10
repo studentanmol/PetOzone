@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href="/img/logo2.ico" rel="icon">
+</head>
+<style>
+    .username {
+        padding: 20px 20px 20px 20px;
+        border: 1px solid rgb(15, 15, 15);
+        margin: 120px 400px 0px 400px;
+        border-radius: 4px;
+    }
+    .password {
+        padding: 20px 20px 20px 20px;
+        border: 1px solid rgb(15, 15, 15);
+        margin: 1px 400px 0px 400px;
+        border-radius: 4px;
+    }
+ h6{
+     text-align: center;
+ }
+ h1{
+     text-align: center;
+     padding-top: 40px;
+ }
+ #logbtn{
+    padding:10px 212px;
+    margin-left: 400px;
+    border-radius: 4px;
+    background-color: rgb(31, 112, 121);
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    border-style: none;
+    
+ }
+#logbtn:hover{
+    background-color:rgb(10, 107, 117) ;
+}
+ body{
+     background-image: url(../static/bg_login.jpg);
+     background-size: cover;
+     background-repeat: none;
+ }
+.text{
+    background-color: transparent;
+    border-style: none;
+    padding: 3px 80px 3px 10px;
+    
+    color: rgb(10, 10, 10);
+}
+::placeholder{
+    color: black;
+    
+}
+</style>
+
+<body>
+    <!-- <div class="elements">
+        <label for="formGroupExampleInput" class="form-label">Username</label>
+        <input type="text" class="form-control" id="" placeholder="Enter unique username">
+        <br>
+        <label for="formGroupExampleInput" class="form-label">Password</label>
+        <input type="password" class="form-control" name="Password" id="" placeholder="abc#@123">
+        <br>
+        <button type="button" id="logbtn">Log in</button>
+        <h6>Don't have an account? <a href="">Sign up</a></h6>
+    </div> -->
+    
+    <h1><img src="../static/logo2.ico" alt="" height="37px">PetOZone Log in</h1>
+    <div class="username">
+    <i class="fas fa-user"></i>
+    <input type="text" class="text" placeholder="Username"></div> 
+    <br><div class="password">
+    <i class="fas fa-lock"></i>
+    <input type="password" class="text" name="" id=""placeholder="Password"></div>
+    <br>
+    <b><button type="button" id="logbtn">Log in</button></b>
+    <div ><h6 id="text">Don't have an account? <a href="">Sign up</a></h6></div>
+</body>
+
+</html>

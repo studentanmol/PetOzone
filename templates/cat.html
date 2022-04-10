@@ -1,0 +1,529 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Cat Products
+{% endblock %}
+
+{% block styles %}
+<style>
+    .fw-bolder {
+        font-weight: bolder !important;
+    }
+
+    .fw-lighter {
+        font-weight: lighter !important;
+    }
+
+    .cc_code {
+        font-weight: 700;
+        /*border:1px dashed #1B8C7F; padding:0px 4px;*/
+        color: #F65959;
+    }
+
+
+    .top {
+        font-size: 14px;
+        color: #333 !important;
+        padding: 6px;
+        text-align: center;
+    }
+
+    #logbtn {
+        background-color: rgb(31, 112, 121);
+        color: rgb(255, 255, 255);
+        font-size: larger;
+        border-style: none;
+
+    }
+
+    #logbtn:hover {
+        background-color: rgb(10, 107, 117);
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="top">
+    <a>
+        THE COSIEST PET WEAR IN TOWN IS HERE. <span class="cc_code">SHOP NOW</span><br>
+        Don’t miss out! Get <span class="cc_code">FREE SHIPPING</span> on all orders!
+    </a>
+</div>
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">All about Cats</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+    </div>
+</header>
+
+<form action="/cats" method="post">
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Chicken With Tuna In Gravy Adult Wet Cat Food.jpg"
+                            alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Chicken With Tuna In Gravy Adult Wet Cat Food</h5>
+                                <!-- Product reviews-->
+                                <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2022-01-04</h6>
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <p></p>
+                                <!-- Product price-->
+                                <br>
+                                ₹899
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+
+
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=12>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/70% Tuna Canned Wet Cat Food.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">70% Tuna Canned Wet Cat Food</h5>
+                                <!-- Product reviews-->
+                                <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2022-02-15</h6>
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <p></p>
+                                <!-- Product price-->
+                                <br>
+                                ₹599
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=13>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/'Cat Collar with Bell Charm'.jpeg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Cat Collar with Bell Charm</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹259
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=14>Add to cart</button></b>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../static/Creamy Salmon Treats.jpg"
+                            alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Creamy Salmon Treats</h5>
+                                <!-- Product reviews-->
+                                <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2022-01-15</h6>
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹499
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=15>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Cat Litter (Lavender Smelling).jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Cat Litter (Lavender Smelling)</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹899
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=16>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Cat Litter Tray with Hood White.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Cat Litter Tray with Hood White</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹1599
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=17>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Playing Rod with Feathers For Cats - 50 cm.jpg"
+                            alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Playing Rod with Feathers For Cats - 50 cm</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹499
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=23>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Interactive Cat Toys - Playing Rod With Mouse.jpg"
+                            alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Interactive Cat Toys - Playing Rod With Mouse</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹759
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=24>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Bloom Wildly Scarf For Cats.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Bloom Wildly Scarf For Cats</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹259
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=28>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Flower Child Food Bowl For Cats.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Flower Child Food Bowl For Cats</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹320
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=30>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Liquid Supplement for Pets - 150 ml.jpg"
+                            alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Liquid Supplement for Pets - 150 ml</h5>
+                                <!-- Product reviews-->
+                                <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2024-01-30</h6>
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹459
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=33>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/Himalaya Digyton Drops - 30 ml.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Himalaya Digyton Drops - 30 ml</h5>
+                                <!-- Product reviews-->
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹459
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=34>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top"
+                            src="../static/'Natural Shampoo for Puppy and Kitten.jpg"
+                            alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Natural Shampoo for Puppy and Kitten</h5>
+                                <!-- Product reviews-->
+                                <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2024-01-30</h6>
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹319
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="text-center">
+
+                            <b><button type="submit" id="logbtn" name="submit_button" value=35>Add to cart</button></b>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; PetOzone</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</form>
+{% endblock %}

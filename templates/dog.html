@@ -1,0 +1,1083 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Dog Products
+{% endblock %}
+
+{% block styles %}
+<style>
+    .fw-bolder {
+        font-weight: bolder !important;
+    }
+
+    .fw-lighter {
+        font-weight: lighter !important;
+    }
+
+    .cc_code {
+        font-weight: 700;
+        /*border:1px dashed #1B8C7F; padding:0px 4px;*/
+        color: #F65959;
+    }
+
+
+    .top {
+        font-size: 14px;
+        color: #333 !important;
+        padding: 6px;
+        text-align: center;
+    }
+
+    #logbtn {
+        background-color: rgb(31, 112, 121);
+        color: rgb(255, 255, 255);
+        font-size: larger;
+        border-style: none;
+
+    }
+
+    #logbtn:hover {
+        background-color: rgb(10, 107, 117);
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="top">
+    <a>
+        THE COSIEST PET WEAR IN TOWN IS HERE. <span class="cc_code">SHOP NOW</span><br>
+        Don’t miss out! Get <span class="cc_code">FREE SHIPPING</span> on all orders!
+    </a>
+</div>
+
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">All about dogs</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+    </div>
+</header>
+
+<!-- Section-->
+<form action="\dogs" method="post">
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../static/Vegetarian Natural Chew Bone.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Vegetarian Natural Chew Bone</h5>
+                                <!-- Product reviews-->
+                                <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2023-10-04</h6>
+
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹60
+
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <p></p>
+                            <div class="text-center">
+
+                                <b><button type="submit" id="logbtn" name="submit_button" value=1>Add to
+                                    cart</button></b>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">NEW
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="../static/Dogaholic Milky Chew Stick Style.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Dogaholic Milky Chew Stick Style</h5> 
+                                <!-- Product reviews-->
+                                <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2024-12-01</h6>
+                                <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                        style="width:100%">Rated <strong class="rating">3.00</strong> out of 5</span>
+                                </div>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <span class="fas fa-paw checked"></span>
+                                <!-- Product price-->
+                                <br>
+                                ₹100
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <p></p>
+                            <div class="text-center">
+
+                                <b><button type="submit" id="logbtn" name="submit_button" value=2>Add to
+                                    cart</button></b></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Chicken Liver With Turmeric.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Chicken Liver With Turmeric</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2022-07-08</h6>
+
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹499
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=3>Add to cart</button></b>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                NEW</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Apple & Banana Vegetarian Dog Bi.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Apple & Banana Vegetarian Dog Biscuits-Gluten Free</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2023-12-10</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">2.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹479
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value="4">Add to
+                                        cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Dry Puppy Food.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Dry Puppy Food</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2022-06-04</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">4.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹399
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value="5">Add to
+                                        cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Steamed Atlantic Salmon & Vegeta.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Steamed Atlantic Salmon & Vegetables Wet Dog Food</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2022-02-191</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹749
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=6>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                NEW</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/milk2.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Pedigree Milk & Vegetables Dry Puppy Food</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2022-01-04</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 4 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">4.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹299
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=7>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                BESTSELLER</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Classic Nylon Dog Collar.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Classic Nylon Dog Collar</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">5.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹359
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=8>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Dog Leash with Carabiner.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Dog Leash with Carabiner</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹699
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=9>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                NEW</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Retractable Dog Leash (5 metre).jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Retractable Dog Leash (5 metre)</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹1299
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=10>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Bow Ties - Red.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Bow Ties - Red</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹239
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=11>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Oval Dog Bed For Winter - Light Brown.jpg"
+                                alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Oval Dog Bed For Winter - Light Brown</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹1399
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=18>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Snoozies Dog Bed - Lilac and Grey.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Snoozies Dog Bed - Lilac and Grey</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹1799
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=19>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                NEW</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Cuddly Cave Puppy Cat Bed.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Cuddly Cave Puppy Cat Bed</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹1249
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=20>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Tennis Dog Ball -Black and Green.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Tennis Dog Ball -Black and Green</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹100
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=21>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/GiGwi Friendz Dog Plush Toy (with Squeaker).jpg"
+                                alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">GiGwi Friendz Dog Plush Toy (with Squeaker)</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹259
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=22>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Dog Sweatshirt - Orange.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Dog Sweatshirt - Orange</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹359
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=25>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                NEW</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Dog Sweater - Pink.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Dog Sweater - Pink</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹599
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=26>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Sports Captain Dog.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sports Captain Dog</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹599
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=27>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                NEW</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Harry Potter Dog T-Shirt.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Harry Potter Dog T-Shirt</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹559
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=29>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Vitamin & Mineral Supplement for Dogs.jpg"
+                                alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Vitamin & Mineral Supplement for Dogs</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2023-12-10</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹655
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=31>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/The Indian Collective Indigo Print Dog Kurta.jpg"
+                                alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">The Indian Collective Indigo Print Dog Kurta</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹559
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=32>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Liquid Supplement for Pets - 150 ml.jpg"
+                                alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Liquid Supplement for Pets - 150 ml</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2024-01-30</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹459
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=33>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Himalaya Digyton Drops - 30 ml.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Himalaya Digyton Drops - 30 ml</h5>
+                                    <!-- Product reviews-->
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹459
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=34>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/'Natural Shampoo for Puppy and Kitten.jpg"
+                                alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Natural Shampoo for Puppy and Kitten</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2024-01-30</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 3 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">3.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <span class="fas fa-paw checked"></span>
+                                    <!-- Product price-->
+                                    <br>
+                                    ₹319
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value=35>Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
+                                FREE
+                            </div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="../static/Feed a Dog in Need.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Feed a Dog in Need</h5>
+                                    <!-- Product reviews-->
+                                    <h6 class="fw-lighter" style="color:#ff0505">Expiry Date:2023-10-05</h6>
+                                    <div class="star-rating" role="img" aria-label="Rated 5 out of 5"><span
+                                            style="width:100%">Rated <strong class="rating">5.00</strong> out of
+                                            5</span></div>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+                                    <span class="fas fa-paw checked" style="color: #f26d15"></span>
+
+                                    <!-- Product price-->
+                                    <br>
+                                    FREE
+                                </div>
+                            </div>
+                                <p></p>
+                                <div class="text-center">
+
+                                    <b><button type="submit" id="logbtn" name="submit_button" value="36">Add to
+                                            cart</button></b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+</form>
+
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; PetOzone</p>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
+{%endblock%}
