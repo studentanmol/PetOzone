@@ -89,7 +89,7 @@ Following are the attributes:
   **Constraints**: pet_id is primary key, pet_type is not NULL.
   
   ### Relatonal Database Schema
-  ![Relational Database schema](./Relational Database Schema.png)
+  ![Relational Database schema](./Relational_Schema.png)
   
   ### app.py
   This is where Flask is used to create the website. Its various functions are:
