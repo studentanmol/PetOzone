@@ -88,6 +88,9 @@ Following are the attributes:
 
   **Constraints**: pet_id is primary key, pet_type is not NULL.
   
+  ### Relatonal Database Schema
+  ![Relational Database schema](./Relational Database Schema.png)
+  
   ### app.py
   This is where Flask is used to create the website. Its various functions are:
   * login_required() is a decorator that ensures that only logged in users can access a part of the website.
