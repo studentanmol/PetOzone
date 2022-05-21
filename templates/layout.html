@@ -21,7 +21,27 @@
 
   <title>PetOZone: {% block title %}{% endblock %}</title>
 </head>
+<style>
+ .search{
+   color: white;
+ }
+ .search:hover{
+   background-color: rgb(254, 254, 254);
+ }
+ .search:focus{
+   background-color: antiquewhite;
+ }
+ .box{
+padding: 5px 20px 5px 15px;
+border-color: rgb(179, 179, 179);
+border-radius: 30px;
+ }
+ 
+ input[type=submit]:checked + .btn{
+   background-color: red;
+ }
 
+</style>
 {% block styles %}{% endblock %}
 
 <body>
@@ -56,7 +76,14 @@
           </li>
         </ul>
       </div>
+      <form method="post" action="/search">
+        <div>
+          <input name="search" type="text" class="box" placeholder="Search for product here"/>
+          <button type="submit" class="search btn btn-outline"><i class="fa fa-search"></i></button>
+        </div>
+     </form>
     </div>
+ 
     <a href="/logout"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
       Log Out <i class="fas fa-user"></i>
     </button></a>
