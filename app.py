@@ -4,6 +4,7 @@ from  flask_mysqldb  import  MySQL
 import  MySQLdb.cursors
 import os
 from functools import wraps
+from trie import Trie
 
 app = Flask(__name__)
 
@@ -184,7 +185,10 @@ def dogs():
         return redirect("/cart")
 
     else:
-        return render_template("dog.html")
+        cursor  =  mysql.connection.cursor(MySQLdb.cursors.DictCursor) 
+        cursor.execute("select distinct uses.pet_id,pets.pet_type,product.prod_sub_id,prod_sub.name,product.price,product.expiry_date from product,prod_sub,uses,pets where product.prod_sub_id= prod_sub.prod_sub_id AND pets.pet_id=uses.pet_id AND uses.prod_id=product.prod_id AND uses.pet_id=10;")
+        prods = cursor.fetchall()
+        return render_template("dog.html",prods=prods,name="dogs")
 
 
 @app.route("/cats",methods=["GET","POST"])
@@ -211,7 +215,10 @@ def cats():
         return redirect("/cart")
 
     else:
-        return render_template("cat.html")
+        cursor  =  mysql.connection.cursor(MySQLdb.cursors.DictCursor) 
+        cursor.execute("select distinct uses.pet_id,pets.pet_type,product.prod_sub_id,prod_sub.name,product.price,product.expiry_date from product,prod_sub,uses,pets where product.prod_sub_id= prod_sub.prod_sub_id AND pets.pet_id=uses.pet_id AND uses.prod_id=product.prod_id AND uses.pet_id=20;")
+        prods = cursor.fetchall()
+        return render_template("cat.html",prods=prods)
 
 
 
@@ -220,6 +227,8 @@ def cats():
 def cart():
     """Show users their cart"""
     if request.method == "POST":
+        if request.form["address"] == "address":
+            return redirect("/address")
         cursor  =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
         cursor.execute("SELECT cart_id FROM cart WHERE cust_id=%s;",[session["user_id"]])
         cart_id = cursor.fetchall()
@@ -231,10 +240,9 @@ def cart():
                 count = 1
                 break
         
-        if count is 1:
+        if count == 1:
             return redirect("/cart")
-        else:
-            return redirect("/address")
+        
     else:
         cursor  =  mysql.connection.cursor(MySQLdb.cursors.DictCursor) 
         cursor.execute('SELECT cart_id, name,price,quantity,expiry_date,product.prod_id FROM product JOIN prod_sub ON product.prod_sub_id = prod_sub.prod_sub_id JOIN cart ON cart.prod_id = product.prod_id WHERE cart.cust_id = %s;',[session["user_id"]]) 
@@ -314,7 +322,72 @@ def orders():
 @app.route("/example")
 def example():
     cursor  =  mysql.connection.cursor(MySQLdb.cursors.DictCursor) 
-    cursor.execute('SELECT O.quantity,O.invoice_amt,O.order_id,P.name AS product_name,O.order_date,S.shipment_status from orders O,delivery_location D,prod_sub P,shipment S,product WHERE S.order_id=O.order_id AND O.delivery_location_id=D.delivery_location_id AND O.prod_id=product.prod_id AND product.prod_sub_id=P.prod_sub_id AND O.cust_id=%s;',[2]) 
-    #usernames = cursor.execute("SELECT * FROM customer WHERE username = %s",["pranati01"])
+    cursor.execute('SELECT name FROM prod_category;')
+    key = "ppl"
+    cursor.execute("SELECT DISTINCT uses.pet_id,pets.pet_type,product.prod_sub_id,prod_sub.name,product.price,product.expiry_date FROM product,prod_sub,uses,pets where product.prod_sub_id= prod_sub.prod_sub_id AND pets.pet_id=uses.pet_id AND uses.prod_id=product.prod_id AND prod_sub.name LIKE %s;",['%' + key + '%'])
     records = cursor.fetchall()
-    return render_template("confirm.html")
+    #usernames = cursor.execute("SELECT * FROM customer WHERE username = %s",["pranati01"])
+    #records = cursor.fetchall()
+    return render_template("example.html",records=records)
+
+@app.route("/search",methods=["GET","POST"])
+def search():
+    if request.method=="POST":
+        """If user submits a search"""
+        prods=()
+        cursor  =  mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+        cursor.execute("SELECT DISTINCT prod_sub.name FROM product,prod_sub,uses,pets WHERE product.prod_sub_id= prod_sub.prod_sub_id AND pets.pet_id=uses.pet_id AND uses.prod_id=product.prod_id;")
+        prods = cursor.fetchall()
+        keys = set()
+        for i in range(len(prods)):
+            keys.add(prods[i]['name'])
+        
+        key = request.form.get("search")
+        key = key.capitalize()
+
+        if key == "Dog" or key == "Dogs":
+            return redirect("/dogs")
+        
+        elif key == "Cat" or key=="Cats":
+            return redirect("/cats")
+        
+        cursor.execute('SELECT name FROM prod_category;')
+        category = cursor.fetchall()
+        records = -1
+        for i in range(4):
+            if category[i]['name'] == key:
+                cursor.execute("SELECT DISTINCT uses.pet_id,pets.pet_type,product.prod_sub_id,prod_sub.name,product.price,product.expiry_date FROM product,prod_sub,uses,pets,prod_category WHERE product.prod_sub_id= prod_sub.prod_sub_id AND pets.pet_id=uses.pet_id AND uses.prod_id=product.prod_id AND prod_sub.prod_category_id = (SELECT prod_category_id FROM prod_category WHERE name=%s)",[category[i]['name']])
+                records=cursor.fetchall()
+                break
+        
+        if records != -1:
+            return render_template("dog.html",prods=records,name="pets",key=key)
+        
+        # creating trie object
+        t = Trie()
+        
+        # creating the trie structure with the
+        # given set of strings.
+        t.formTrie(keys)
+        
+        # autocompleting the given key using
+        # our trie structure.
+        comp = t.printAutoSuggestions(key)
+        
+        if comp == -1:
+            return render_template("apology.html",top=400,bottom="No other products found with this word")
+        elif comp == 0:
+            cursor.execute("SELECT DISTINCT uses.pet_id,pets.pet_type,product.prod_sub_id,prod_sub.name,product.price,product.expiry_date FROM product,prod_sub,uses,pets where product.prod_sub_id= prod_sub.prod_sub_id AND pets.pet_id=uses.pet_id AND uses.prod_id=product.prod_id AND prod_sub.name LIKE %s;",['%' + key + '%'])
+            records = cursor.fetchall()
+            if len(records) == 0:
+                return render_template("apology.html",top=400,bottom="No product found with this word")
+            return render_template("dog.html",prods=records,name="pets",key=key)
+        prods=[]
+        for name in comp:
+            cursor.execute("SELECT DISTINCT uses.pet_id,pets.pet_type,product.prod_sub_id,prod_sub.name,product.price,product.expiry_date FROM product,prod_sub,uses,pets where product.prod_sub_id= prod_sub.prod_sub_id AND pets.pet_id=uses.pet_id AND uses.prod_id=product.prod_id AND prod_sub.name LIKE %s;",[name])
+            prods.append(cursor.fetchone())
+        prods=tuple(prods)
+        return render_template("dog.html",prods=prods,name="pets",key=key)
+    else:
+        return redirect("/")
+
