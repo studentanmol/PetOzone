@@ -3,7 +3,8 @@ PetOzone is a website of shops that allows users to select and buy pet accessori
 Website Flow: 
 - When a user first visits the website they will be asked to register and provide their details.
 - They can then log in to view the homepage of the website. 
-- On that home page they can view and add to their cart various accessories and food products for their pets. 
+- On that home page they can view and add to their cart various accessories and food products for their pets.
+- They can also enter an item to search in the searchbox and view all products related to the term they entered.
 - They can visit their cart to see the products they want to buy and can also remove them.
 - Check Out and see the final price to pay along with the items bought.
 
@@ -104,6 +105,7 @@ Following are the attributes:
   * The cart() function depicting cart route shows the user the products in their cart. Users can remove a product or confirm their order. They will then be redirected to a confirmation page.
   * address() route displays a form for the user to input their address where the order will be delivered. The address is stored in the databse the first time and displayed to the user on multiple uses.
   * order() function depicting order route shows the users the status of their orders, i.e. the orders that have delivered already, are being processed, are on the way,etc.
+  * search() function takes input from search box and displays all products that are in the category of the input, start with the input and have the input in the product.
 
 ##### layout.html
-This html file contains the layout of the page from which all other html files extend. The page has a navbar at the top. The name of the page is in the top left with the links for register and login in the left. Only a user who has logged in can view the links for products, cart, orders,etc. the rest of the page is according to each html page.
+This html file contains the layout of the page from which all other html files extend. The page has a navbar at the top. The name of the page is in the top left with the links for register and login in the left. There is also a search box which enables users to search for all the products. Only a user who has logged in can view the links for products, cart, orders,etc. the rest of the page is according to each html page.
