@@ -1,5 +1,5 @@
 # PetOzone
-PetOzone is a website of shops that allows users to select and buy pet accessories and food from the comfort of their homes. The websitr is made using Flask and SQL.
+PetOzone is a website of shops that allows users to select and buy pet accessories and food from the comfort of their homes. The website is made using Flask and SQL.
 Website Flow: 
 - When a user first visits the website they will be asked to register and provide their details.
 - They can then log in to view the homepage of the website. 
